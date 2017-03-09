@@ -1,14 +1,8 @@
+// Sondre Gjellestad
+
 var gameVersion = "0.1";
 
-var state = 0;
 var hud, menu;
-
-var particles = [];
-var players = [];
-var rockets = [];
-var lasers = [];
-
-var bgsfx, bgsfxReverb, hitFx, laserSound, monospace;
 
 function preload() {
   monospace = loadFont('assets/monospace.ttf');
@@ -22,6 +16,14 @@ function setup() {
   frameRate(60);
   background(0);
   textFont(monospace);
+
+  // Global arrays
+  particles = [];
+  players = [];
+  rockets = [];
+  lasers = [];
+
+  state = 0;
 
   bgsfxReverb = new p5.Reverb();
   bgsfxReverb.process(bgsfx);
