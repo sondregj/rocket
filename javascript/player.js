@@ -17,7 +17,7 @@ function Player(id, aiPlayer) {
       if (keyIsDown(RIGHT_ARROW)) {
         this.rocket.setRotation(0.08);
       }
-    } else if (this.playerId == 2) {
+    } else if (this.playerId == 2 && this.aiPlayer == 0) {
       if (keyIsDown(87)) {
         this.rocket.acc(this.rocket.accSpeed.copy());
       }
@@ -27,8 +27,21 @@ function Player(id, aiPlayer) {
       if (keyIsDown(68)) {
         this.rocket.setRotation(0.08);
       }
+    } else {
+      this.ai();
     }
   }
 
-  this.ai = function() {}
+  this.ai = function() {
+    var enemy = players[0].rocket.pos.copy();
+    var a = atan2(this.rocket.pos.y - enemy.y, this.rocket.pos.x - enemy.x) + PI;
+    console.log(a);
+  }
+
+  this.shoot = function() {
+    if (players[i].rocket.laserLoad < 100) {
+      lasers.push(new Laser(players[1].rocket.pos, players[1].rocket.rotation, 2));
+      players[1].rocket.laserLoad += 2.5;
+    }
+  }
 }

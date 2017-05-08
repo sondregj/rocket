@@ -91,7 +91,7 @@ function keyPressed() {
           lasers.push(new Laser(players[0].rocket.pos, players[0].rocket.rotation, 1));
           players[0].rocket.laserLoad += 2.5;
         }
-        if (keyCode == 83) {
+        if (keyCode == 83 && players[1].aiPlayer == 0) {
           lasers.push(new Laser(players[1].rocket.pos, players[1].rocket.rotation, 2));
           players[1].rocket.laserLoad += 2.5;
         }
