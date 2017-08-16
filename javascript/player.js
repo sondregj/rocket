@@ -33,9 +33,29 @@ function Player(id, aiPlayer) {
   }
 
   this.ai = function() {
+    var angleThreshold = PI / 2;
+
     var enemy = players[0].rocket.pos.copy();
-    var a = atan2(this.rocket.pos.y - enemy.y, this.rocket.pos.x - enemy.x) + PI;
-    console.log(a);
+    var a = atan2(enemy.y - this.rocket.pos.y, enemy.x - this.rocket.pos.x) + 1.5 * PI;
+    //console.log(a);
+    if ((a - players[1].rocket.rotation) % (2 * PI) = PI) {
+
+      this.rocket.acc(this.rocket.accSpeed.copy());
+    }
+    console.log((a - players[1].rocket.rotation) % (2 * PI));
+    /*
+        if ((a - players[1].rocket.rotation) % (2 * PI) < PI - angleThreshold) {
+          //console.log("True");
+        } else if ((a - players[1].rocket.rotation) % (2 * PI) > PI + angleThreshold) {
+          //console.log("true");
+        }
+        */
+
+    // Finne ut om skip sikter på det andre, hvis ja; skyte og akselerere, +-45 synsfelt
+    //this.rocket.acc(this.rocket.accSpeed.copy());
+
+
+    // Hvis skip ikke
   }
 
   this.shoot = function() {
