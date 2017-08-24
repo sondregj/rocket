@@ -17,6 +17,7 @@ function Menu() {
 
     hud = new Hud();
     state = 1;
+
   }
 
   this.render = function() {
@@ -44,7 +45,7 @@ function Menu() {
     }
     rect(width / 2 + 25, height / 2, (width / 8), height / 10);
 
-    textSize(30);
+    textSize(18);
     fill(255, 200);
     text("1 player", 3 * width / 8 - 25 + width / 16, height / 2 + height / 20);
     text("2 players", width / 2 + 25 + (width / 16), height / 2 + height / 20);

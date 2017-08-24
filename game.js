@@ -84,7 +84,7 @@ function windowResized() {
 }
 
 function keyPressed() {
-  if (state) {
+  if (state && countdownDone) {
     for (var i = 0; i < players.length; i++) {
       if (players[i].rocket.laserLoad < 100) {
         if (keyCode == 40) {

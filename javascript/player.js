@@ -38,11 +38,11 @@ function Player(id, aiPlayer) {
     var enemy = players[0].rocket.pos.copy();
     var a = atan2(enemy.y - this.rocket.pos.y, enemy.x - this.rocket.pos.x) + 1.5 * PI;
     //console.log(a);
-    if ((a - players[1].rocket.rotation) % (2 * PI) = PI) {
+    if ((a - players[1].rocket.rotation) % (2 * PI) == PI) {
 
       this.rocket.acc(this.rocket.accSpeed.copy());
     }
-    console.log((a - players[1].rocket.rotation) % (2 * PI));
+    //console.log((a - players[1].rocket.rotation) % (2 * PI));
     /*
         if ((a - players[1].rocket.rotation) % (2 * PI) < PI - angleThreshold) {
           //console.log("True");

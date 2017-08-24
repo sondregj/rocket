@@ -1,7 +1,7 @@
 function Hud() {
   this.scl = 10;
-  this.textSize = 30;
-  this.edgeOffset = 50;
+  this.textSize = 20;
+  this.edgeOffset = 30;
 
   this.update = function() {}
 
@@ -51,7 +51,7 @@ function Hud() {
     text("heading " + floor(players[0].rocket.heading) + "degrees°", 2 * this.edgeOffset, 2 * this.edgeOffset + this.textSize * 1.5);
     text("load " + floor(players[0].rocket.laserLoad) + "%", 2 * this.edgeOffset, 2 * this.edgeOffset + this.textSize * 3);
     text("health " + players[0].rocket.health + "hp", 2 * this.edgeOffset, 2 * this.edgeOffset + this.textSize * 4.5);
-    text("$" + players[0].rocket.money, 2 * this.edgeOffset, 2 * this.edgeOffset + this.textSize * 7);
+    text("$" + players[0].money, 2 * this.edgeOffset, 2 * this.edgeOffset + this.textSize * 7);
 
 
     fill(80, 30, 230, 150);
@@ -60,6 +60,6 @@ function Hud() {
     text("heading " + floor(players[1].rocket.heading) + "degrees°", width - (8 * this.edgeOffset), 2 * this.edgeOffset + this.textSize * 1.5);
     text("load " + floor(players[1].rocket.laserLoad) + "%", width - (8 * this.edgeOffset), 2 * this.edgeOffset + this.textSize * 3);
     text("health " + players[1].rocket.health + "hp", width - (8 * this.edgeOffset), 2 * this.edgeOffset + this.textSize * 4.5);
-    text("$" + players[1].rocket.money, width - (8 * this.edgeOffset), 2 * this.edgeOffset + this.textSize * 7);
+    text("$" + players[1].money, width - (8 * this.edgeOffset), 2 * this.edgeOffset + this.textSize * 7);
   }
 }
