@@ -86,7 +86,7 @@ function windowResized() {
 function keyPressed() {
   if (state) {
     for (var i = 0; i < players.length; i++) {
-      if (players[i].rocket.laserLoad < 100) {
+      if (players[i].rocket.laserLoad <= 99.9) {
         if (keyCode == 40) {
           lasers.push(new Laser(players[0].rocket.pos, players[0].rocket.rotation, 1));
           players[0].rocket.laserLoad += 2.5;
